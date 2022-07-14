@@ -53,7 +53,6 @@ p {
     font-weight: 500;
 }
 
-
 span {
     color: var(--skyBLue);
 }
@@ -99,6 +98,36 @@ h2 {
     padding: 2rem 2rem;
 }
 
+.hover {
+    overflow: hidden;
+    background: linear-gradient(to right, #15BEC9, #15BEC9 50%, black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.hover__footer {
+    overflow: hidden;
+    background: linear-gradient(to right, #15BEC9, #15BEC9 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.hover:hover {
+    background-position: 0 100%;
+}
+
+.hover__footer:hover {
+    background-position: 0 100%;
+}
+
 /*First Article*/
 
 .article {
@@ -126,7 +155,12 @@ h2 {
     width: 100%;
     max-width: 463px;
     min-width: 150px;
-    filter: grayscale(100%)
+    filter: grayscale(100%);
+    transition: all 1s;
+}
+
+.article__aside__img:hover {
+    filter: none;
 }
 
 .contenedor {
@@ -146,7 +180,12 @@ h2 {
 
 .icons {
     font-size: 100px; 
-    color: var(--skyBLue);    
+    color: var(--skyBLue);  
+    transition: all 1s;  
+}
+
+.icons:hover {
+    font-size: 150px;
 }
 
 .article2__section {
